@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <p>Заполните наш опросник!</p>
+        <input type="text" id="input1" style="width: 250px;" placeholder="Сколько вам лет?">
+        <input type="text" id="input2" style="width: 250px;" placeholder="Сколько лет опыта работы?">
+        <input type="text" id="input3" style="width: 250px;" placeholder="Сколько рабочих проектов создано?">
+        <button id="get_result">Проверить профпригодность!</button>
+
+    <div id="result" style="background-color:yellow ; width: 400px;height: 30px;"></div>
+
+    <script>
+
+    function profSkills() {
+
+        var age = +document.getElementById("input1").value;
+    var ageSkill = +document.getElementById("input2").value;
+    var projects = +document.getElementById("input3").value;
+
+        if (age >= 30 && ageSkill >=3 && projects >=2) {
+
+            var html = "Вы нам подходите!";
+
+        } else var html = 'Вы нам не подходите!';
+
+
+
+document.getElementById('result').innerHTML = html;
+
+}
+
+document.getElementById('get_result').addEventListener('click' , profSkills);
+
+    
+    
+    </script>
+
+
+</body>
+</html>

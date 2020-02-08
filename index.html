@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Insert Some Numbers</p>
+
+    <input type="text" id="numbersV4"  placeholder="Write some Digit">
+
+    <button id="get_ResultV4">Generate Random Digit!</button>
+
+    <div id="resultV4" style="background-color:yellow ; width: 400px;height: 30px;"></div>
+
+
+    <script>
+    
+    function generateDigit() {
+
+            var digits1V4 = document.getElementById("numbersV4").value;
+
+           // var random = Math.floor(Math.random() * 10) + 1;
+
+           var random =  function randomInteger(min, max) {
+  // случайное число от min до (max+1)
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
+       console.log( randomInteger(1,3));
+
+            console.log(random);
+
+            if (digits1V4 == random) {
+
+                var htmlV4 = "Win!" + digits1V4 + "=" + random;
+
+                document.getElementById("resultV4").innerHTML = htmlV4;
+            } else {
+
+                var htmlV5 = "Try next!";
+                document.getElementById("resultV4").innerHTML = htmlV5;            
+                
+                }
+    }
+    
+        document.getElementById("get_ResultV4").addEventListener("click", generateDigit);
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+    
+</body>
+</html>
