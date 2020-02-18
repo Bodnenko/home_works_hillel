@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+
+            var guessNumber = prompt ('Угадайте число от 7 до 13', 10);
+
+           function randomInteger(min, max) {
+            // случайное число от min до (max+1)
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+            }
+            
+            var randomNumber = randomInteger(7,13);
+            console.log(randomNumber);
+
+            do {guessNumber = prompt ('Угадайте число от 7 до 13', 10); } while (guessNumber == randomNumber);
+</script>
+
+    <script>
+
+        var requestedNumber = prompt ('Введите число от 1 до 100, кратно которому будут выводиться числа', 10);
+        for(i=1;i<=20;i++){
+            var result = +requestedNumber*i;
+        }
+        console.log(result);
+        
+
+
+
+    </script>
+
+
+
+</body>
+</html>
