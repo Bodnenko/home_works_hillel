@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//  Добавить возможность проверки всех горизонтальных линий
+    
+   var arr = [];
+   var arrLenght = 3;
+   var maxNum = 3;
+   var userCount = 5;
+
+   for ( var j = 0;j < userCount; j++) {
+      arr = [];
+    
+   for( var i=0;i<arrLenght;i++ ){
+       arr.push([
+          Math.floor(Math.random() * maxNum), 
+          Math.floor(Math.random() * maxNum), 
+          Math.floor(Math.random() * maxNum), 
+       ])
+   } 
+   console.log(arr);
+
+    if ( arr[0][1] === arr[1][1] && arr[1][1] === arr[2][1] ){
+        console.log('You Win!');
+    } else { console.log('Try Next!');}
+   }
+ </script>
+    <script>
+
+
+//Заполнить массив рандомными строками в количестве, указанном пользователем, состоящими из значений соответствующей длины
+//Сообщить пользователю какое количество слов какой длины было добавлено. К примеру: 5 words with 10 characters, 7 words with 3 characters etc.
+//Сгруппировать слова в объект по количеству значений в строке: { 1: [‘a’, ‘b’, ‘c’, ‘d’], 2: [‘ab’, ‘cd’, ‘ef’, ‘gh’] }
+
+
+     /*  var alfaBetArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+        var numberOfRandomValues = +prompt('Введите колличество рандомных значений','12');
+
+        var minNumberOfLetters = +prompt('Введите минимальное колличество значений',1);
+        var maxNumberOfLetters = +prompt('Введите минимальное колличество значений',100);
+
+       // var resultArr (numberOfRandomValues) = [];
+
+        resultArr.length = numberOfRandomValues;
+
+        function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+
+        for (i=0;i<numberOfRandomValues;i++){
+            var currentLenghtOfLetters = getRndInteger(minNumberOfCharacters,maxNumberOfCharacters);
+        }
+        for (j=0;j<currentLenghtOfLetters;j++){
+            console.log("Word number " + i, "Letter"+j," is: "+letters[Math.floor(Math.random() * letters.length)]);
+        }
+
+        var resultArrListOfNumbers = [];
+
+        var resObject = {
+            numRandValue:  numberOfRandomValues,
+            min:minNumberOfCharacters,
+            max:maxNumberOfCharacters,
+       }
+
+     </script>
+    
+</body>
+</html>
