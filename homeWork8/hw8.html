@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Написать функцию, которая возвращает количество часов, прошедших с момента введенной даты.
+
+
+        //Написать скрипт, который будет выводить часы в консоль. В формате HH:mm:ss
+        function getHoursFromInputdate() {
+
+        var now = new Date();
+        console.log( now );
+
+        var inputData = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours());
+        console.log( inputData)
+        var countHours = now - inputData;
+        console.log( countHours );
+        return Math.round(countHours / (1000*3600));
+        
+        }
+        console.log( getHoursFromInputdate());
+    </script>
+</body>
+</html>
