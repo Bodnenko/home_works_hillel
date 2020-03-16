@@ -10,8 +10,6 @@
     <script>
         //Написать функцию, которая возвращает количество часов, прошедших с момента введенной даты.
 
-
-        //Написать скрипт, который будет выводить часы в консоль. В формате HH:mm:ss
         function getHoursFromInputdate() {
 
         var now = new Date();
@@ -25,6 +23,15 @@
         
         }
         console.log( getHoursFromInputdate());
+    </script>
+    <script>
+        //Написать скрипт, который будет выводить часы в консоль. В формате HH:mm:ss
+        var date = new Date();
+console.log(date);
+var hour = date.getHours();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+console.log('Current time is:'+hour+':'+minutes+':'+seconds);
     </script>
 </body>
 </html>
