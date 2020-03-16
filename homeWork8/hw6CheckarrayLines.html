@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Добавить возможность проверки всех горизонтальных линий
+    //Создать массив из 3х массивов с 3-мя рандомными значениями.
+        //Проверить на соответствие всех значений в средней горизонтальной линии.
+
+        function randomInt(min, max) {
+  // случайное число от min до (max+1)
+  var rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+} 
+
+var arr = [
+    [randomInt(1,4),randomInt(1,4),randomInt(1,4)],
+    [randomInt(1,4),randomInt(1,4),randomInt(1,4)],
+    [randomInt(1,4),randomInt(1,4),randomInt(1,4)],
+]
+console.log(arr);
+
+var numLine1 = arr[0][1],
+numLine2 = arr[1][1],
+numLine3 = arr[2][1];
+
+if (numLine1 == numLine2 && numLine2 == numLine3) {console.log('WIN!')} else {console.log('Lose!')};
+    </script>
+</body>
+</html>
